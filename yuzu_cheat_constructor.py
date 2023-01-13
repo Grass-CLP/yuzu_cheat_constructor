@@ -51,6 +51,9 @@ def expand_txt(path: str, f: str):
                 sep += 1
         epoch.append(line)
 
+    if epoch:
+        write_epoch(name, target_path, epoch, sep)
+
 
 def list_txt(path: str):
     for f in os.listdir(path):
